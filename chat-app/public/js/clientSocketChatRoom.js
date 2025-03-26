@@ -14,7 +14,7 @@ if (!username) {
 
 
 // WebSocket 연결: (https, ws 자동 선택)
-const socket = new WebSocket(`ws://localhost:8083/ws`);
+const socket = new WebSocket(`ws://localhost:8083/ws`); //stomp방식으로 진화하기전 방식
 
 // 연결 시 join 메시지 전송
 socket.addEventListener('open', () => {

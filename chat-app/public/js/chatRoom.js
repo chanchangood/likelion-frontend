@@ -14,7 +14,7 @@ const socket = new WebSocket(`${protocol}//${window.location.host}`);
 // 연결 시 join 메시지 전송 (roomId와 username 포함)
 socket.addEventListener('open', () => {
     socket.send(JSON.stringify({ type: 'join', roomId, username }));
-});
+});// 여기서 입장시 메세지를 보냄. 즉 백에서는 null로 작동.
 
 socket.addEventListener('message', (event) => {
     const data = JSON.parse(event.data);
